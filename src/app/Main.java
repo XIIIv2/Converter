@@ -7,12 +7,18 @@ public class Main {
         System.out.println("Converter app");
 
         double mls = 5;
+        double km = 12;
         double kms = convMilesToKm(mls);
+        double miles = convKmToMiles(km);
 
-        System.out.printf("Result: %,.2f kms.", kms);
+        System.out.printf("Result: %,.2f kms and %,.2f miles.", kms, miles);
     }
 
     private static double convMilesToKm(double miles) {
         return miles / CONV_K;
+    }
+
+    private static double convKmToMiles(double km) {
+        return km * CONV_K;
     }
 }
